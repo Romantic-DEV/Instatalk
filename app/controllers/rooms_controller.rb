@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
   def index
     @rooms = Room.all
     @room = Room.new
-    @users_online = User.where(online: true) + [current_user]
+    @users_online = (User.where(online: true) + [current_user]).uniq
   end
 
   def show
