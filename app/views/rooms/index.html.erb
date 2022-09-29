@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
+<div class="row justify-content-between">
   <div class="col-5">
     <h1>Rooms</h1>
 
@@ -13,12 +13,12 @@
     </div>
   </div>
 
-  <div class="col-5 mt-2 text-right">
+  <div class="col-4 mt-2 text-left">
     <h3>Users online:</h3>
-    <% @users.each do |user| %>
-      <%= user.nickname if user.online %>
+
+    <% @users_online.each do |user| %>
+      <p class="mb-1 text-success"><%= user.nickname %></p>
     <% end %>
-    <div id="users"></div>
   </div>
 </div>
 

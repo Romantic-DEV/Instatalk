@@ -8,5 +8,3 @@ App.appereance = App.cable.subscriptions.create "AppereanceChannel",
     console.log('Disconnected from AppereanceChannel')
 
   received: (data) ->
-    console.log('Received message: ' + data['message'])
-    $('#users').html ("<p>" + data['message'] + "</p>")
