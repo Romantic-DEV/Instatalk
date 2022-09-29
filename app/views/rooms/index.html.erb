@@ -16,9 +16,13 @@
   <div class="col-4 mt-2 text-left">
     <h3>Users online:</h3>
 
-    <% @users_online.each do |user| %>
-      <p class="mb-1 text-success"><%= user.nickname %></p>
-    <% end %>
+    <div id="users" class="text-success">
+      <% @users_online.each do |user| %>
+        <p id="user-<%= user.id %>">
+          <%= user.nickname %>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
 
