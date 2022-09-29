@@ -18,7 +18,7 @@
 
     <div id="users" class="text-success">
       <% @users_online.each do |user| %>
-        <p id="user-<%= user.id %>">
+        <p id="<%= user.id %>">
           <%= user.nickname %>
         </p>
       <% end %>
