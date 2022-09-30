@@ -10,7 +10,7 @@ App.appereance = App.cable.subscriptions.create "AppearanceChannel",
   received: (data) ->
     if (data["action"] == "appear")
       $('#users').append "<p id='#{data["user_id"]}'>#{data['nickname']}</p>"
-    else
+    if (data["action"] == "disappear")
       $("##{data["user_id"]}").remove()
 
 
