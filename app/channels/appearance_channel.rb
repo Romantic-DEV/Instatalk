@@ -2,21 +2,25 @@ class AppearanceChannel < ApplicationCable::Channel
   def subscribed
     stream_from "appearance_channel"
 
-    debugger
-    unless current_user.online == true
-      current_user.update(online: true)
-      user_appearance_action(current_user.id, "appear")
-    end
+    @list_name = 'current_users_nicknames'
+    $redis.rpush(@list_name, nickname)
+
+    #current_user.update(online: true)
+    user_appearance_action
   end
 
   def unsubscribed
-    unless ActionCable.server.connections.map(&:current_user).include?(current_user)
-      current_user.update(online: false)
-      user_appearance_action(current_user.id, "disappear")
-    end
+    $redis.lrem(@list_name, 1, nickname)
+    #current_user.update(online: false)
+    user_appearance_action
   end
 
-  def user_appearance_action(user_id, action)
-    ActionCable.server.broadcast "appearance_channel", user_id: user_id, action: action, nickname: current_user.nickname
+  def user_appearance_action
+    @users = $redis.lrange(@list_name, 0, -1).uniq
+    ActionCable.server.broadcast "appearance_channel", users: @users
+  end
+
+  def nickname
+    current_user.nickname
   end
 end
