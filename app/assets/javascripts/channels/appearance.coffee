@@ -8,7 +8,6 @@ App.appereance = App.cable.subscriptions.create "AppearanceChannel",
     console.log('Disconnected from AppearanceChannel')
 
   received: (data) ->
-    console.log(data["users"])
     users = data['users'].map (i) -> "<p>#{i}</p>"
     $('#users').html(users.join(""))
     #data["users"].map
