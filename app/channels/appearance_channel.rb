@@ -5,13 +5,12 @@ class AppearanceChannel < ApplicationCable::Channel
     @list_name = 'current_users_nicknames'
     $redis.rpush(@list_name, nickname)
 
-    #current_user.update(online: true)
     user_appearance_action
   end
 
   def unsubscribed
     $redis.lrem(@list_name, 1, nickname)
-    #current_user.update(online: false)
+
     user_appearance_action
   end
 
