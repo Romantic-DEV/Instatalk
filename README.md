@@ -39,6 +39,8 @@ This is my RoR study project that I created during  [good programmer course](htt
 - I found out what websockets are
 - how they work
 - I learned how to implement them with rails ActionCable
+- Tried coffescript
+- Learned some Jquery basics
 
 ## RUS
 
@@ -83,6 +85,8 @@ bundle exec rails s
 - Я узнал что такое веб-сокеты
 - Понял как они работают
 - Изучил как внедрять их с помощью rails ActionCable
+- Ознакомился с coffescript
+- Изучил немного Jquery
 
 
 
