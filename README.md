@@ -13,7 +13,9 @@ You launch the application. You are given a unique, anonymous nickname. Next, yo
 
 ### To start
 
-- You should have installed ruby(2.5.9) on your pc(how to do this - https://www.ruby-lang.org/en/documentation/installation/)
+- You should have installed ruby(2.5.9) on your pc(how to do this - (here)[https://www.ruby-lang.org/en/documentation/installation/])
+- To store data properly my-instatalk uses REDIS for ActionCable. So, you should have installed redis server with disabled password-authentication(how to install redis: (here)[https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04])
+
 1. Download all files to single folder
 2. Open CMD
 3. Open program directory in CMD
@@ -58,7 +60,9 @@ This is my RoR study project that I created during  [good programmer course](htt
 ![изображение](https://user-images.githubusercontent.com/83035520/193475982-6cdbd056-a6ee-4307-a63e-b0f6d42a8544.png)
 
 ### Как запустить
-- Вы должны установить ruby(2.5.9) на свой компьютер (как это сделать - https://rubyrush.ru/steps/setup-ruby)
+- Вы должны установить ruby(2.5.9) на свой компьютер (как это сделать - [здесь](https://rubyrush.ru/steps/setup-ruby))
+- Для правильного хранения данных my-instatalk использует REDIS для ActionCable. Итак, вы должны были установить сервер redis с отключенной парольной аутентификацией (как установить redis: [здесь](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04-ru))
+
 1. Скачайте все файлы в одну папку
 2. Откройте командную строку
 3. Откройте директорию приложения в командной строке
@@ -87,7 +91,3 @@ bundle exec rails s
 - Изучил как внедрять их с помощью rails ActionCable
 - Ознакомился с coffescript
 - Изучил немного Jquery
-
-
-
-
