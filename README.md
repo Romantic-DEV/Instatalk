@@ -13,8 +13,8 @@ You launch the application. You are given a unique, anonymous nickname. Next, yo
 
 ### To start
 
-- You should have installed ruby(2.5.9) on your pc(how to do this - (here)[https://www.ruby-lang.org/en/documentation/installation/])
-- To store data properly my-instatalk uses REDIS for ActionCable. So, you should have installed redis server with disabled password-authentication(how to install redis: (here)[https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04])
+- You should have installed ruby(2.5.9) on your pc(how to do this - [here](https://www.ruby-lang.org/en/documentation/installation/))
+- To store data properly my-instatalk uses REDIS for ActionCable. So, you should have installed redis server with disabled password-authentication(how to install redis: [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04))
 
 1. Download all files to single folder
 2. Open CMD
