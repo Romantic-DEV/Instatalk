@@ -1,9 +1,14 @@
+channel = undefined
+
 jQuery(document).on 'turbolinks:load', ->
   messages = $('#messages')
 
-  ScrollBottom(250)
   if messages.length > 0
-    createRoomChannel messages.data('room-id')
+    channel = createRoomChannel messages.data('room-id')
+    ScrollBottom(250)
+  else
+    channel && channel.unsubscribe()
+    return
 
   $(document).on 'keypress', '#message_body', (event) ->
     message = event.target.value
@@ -30,4 +35,4 @@ createRoomChannel = (roomId) ->
         @perform 'speak', message: message
 
 ScrollBottom = (speed) ->
-  $("#messages").animate({ scrollTop: $("#messages").get(0).scrollHeight }, speed);
+  $("#messages").animate({scrollTop: $("#messages").get(0).scrollHeight}, speed);
