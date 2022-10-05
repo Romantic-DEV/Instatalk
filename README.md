@@ -61,7 +61,7 @@ This is my RoR study project that I created during  [good programmer course](htt
 
 ### Как запустить
 - Вы должны установить ruby(2.5.9) на свой компьютер (как это сделать - [здесь](https://rubyrush.ru/steps/setup-ruby))
-- Для правильного хранения данных my-instatalk использует REDIS для ActionCable. Итак, вы должны были установить сервер redis с отключенной парольной аутентификацией (как установить redis: [здесь](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04-ru))
+- Для корректного хранения данных my-instatalk использует REDIS для ActionCable. Вы должны иметь установленный сервер redis с отключенной парольной аутентификацией (как установить redis: [здесь](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04-ru))
 
 1. Скачайте все файлы в одну папку
 2. Откройте командную строку
