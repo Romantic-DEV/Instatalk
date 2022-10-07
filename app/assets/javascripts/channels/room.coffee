@@ -1,4 +1,4 @@
-channel = undefined
+channel = null
 
 jQuery(document).on 'turbolinks:load', ->
   messages = $('#messages')
@@ -7,7 +7,7 @@ jQuery(document).on 'turbolinks:load', ->
     channel = createRoomChannel messages.data('room-id')
     ScrollBottom(250)
   else
-    channel && channel.unsubscribe()
+    channel?.unsubscribe()
     return
 
   $(document).on 'keypress', '#message_body', (event) ->
